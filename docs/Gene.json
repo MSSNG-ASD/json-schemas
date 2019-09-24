@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://mssng-asd.github.io/json-schemas/Gene.json",
+    "type": "object",
+    "description": "Gene",
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      }
+    }
+  }

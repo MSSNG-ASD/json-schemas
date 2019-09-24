@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://mssng-asd.github.io/json-schemas/VariantCall.json",
+    "type": "object",
+    "description": "An information on call (sample) of a variant at a particular coordinate or range",
+    "required": [
+      "annotation_id"
+    ],
+    "properties": {
+      "source": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "annotation_id": {
+        "type": "string"
+      },
+      "reference_name": {
+        "type": "string"
+      },
+      "start": {
+        "type": "number"
+      },
+      "end": {
+        "type": "number"
+      },
+      "reference_bases": {
+        "type": "string"
+      },
+      "alternate_bases": {
+        "description": "The alternate alleles that are associated to the variant and to any calls (delimited by comma)",
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "associated_alternate_bases": {
+        "description": "The alternate allele that is associated to the variant and the call",
+        "type": "string"
+      },
+      "gene_symbol": {
+        "type": "string"
+      },
+      "entrez_id": {
+        "type": "number"
+      },
+      "refseq_id": {
+        "type": "string"
+      },
+      "freq_max": {
+        "type": "number"
+      },
+      "a1000g_freq_max": {
+        "type": "number"
+      },
+      "exac_freq_max": {
+        "type": "number"
+      },
+      "cg_freq_max": {
+        "type": "number"
+      },
+      "gnomad_exome_freq_max": {
+        "type": "number"
+      },
+      "gnomad_genome_freq_max": {
+        "type": "number"
+      },
+      "mssng_freq_max": {
+        "type": "number"
+      },
+      "effect_impact": {
+        "type": "number"
+      },
+      "dbsnp": {
+        "type": "string"
+      },
+      "clinvar_sig": {
+        "type": "string"
+      },
+      "cgd_disease": {
+        "type": "string"
+      },
+      "cgd_inheritance": {
+        "type": "string"
+      },
+      "omim_phenotype": {
+        "type": "string"
+      },
+      "call_filter": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "sample_id": {
+        "type": "string"
+      },
+      "ad": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "call_dp": {
+        "type": "number"
+      },
+      "call_gq": {
+        "type": "number"
+      },
+      "call_phaseset": {
+        "type": "string"
+      },
+      "genotype": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "subject_id": {
+        "type": "string"
+      },
+      "dnasource": {
+        "type": "string"
+      },
+      "platform": {
+        "type": "string"
+      },
+      "sex": {
+        "$ref": "https://dnastack.github.io/pgp-canada-schema/Sex.json"
+      },
+      "familyid": {
+        "type": "string"
+      },
+      "familytype": {
+        "type": "string"
+      },
+      "fatherid": {
+        "type": "string"
+      },
+      "motherid": {
+        "type": "string"
+      },
+      "affection": {
+        "type": "string"
+      },
+      "de_novo": {
+        "type": "boolean"
+      },
+      "phenotyped": {
+        "type": "boolean"
+      },
+      "aggregated_ehq": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      },
+      "aggregated_hq": {
+        "type": "string",
+        "$comment": "This is an aggregation by concatenating values with comma."
+      }
+    }
+  }
