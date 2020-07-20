@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "https://mssng-asd.github.io/json-schemas/VariantCall.json",
     "type": "object",
-    "description": "An information on call (sample) of a variant at a particular coordinate or range",
+    "description": "Small Variant call with annotation information",
     "required": [
       "annotation_id"
     ],

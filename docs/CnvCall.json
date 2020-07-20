@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://mssng-asd.github.io/json-schemas/CnvCall.json",
+  "type": "object",
+  "description": "Copy Number Variation with annotation information",
+  "required": [
+    "sample"
+  ],
+  "properties": {
+    "sample": {
+      "type": "string",
+      "$comment": "sample identifier"
+    },
+    "chr": {
+      "type": "string",
+      "$comment": "chromosome"
+    },
+    "start_position": {
+      "type": "number",
+      "$comment": "start position"
+    },
+    "end_position": {
+      "type": "number",
+      "$comment": "end position"
+    },
+    "CNV_type": {
+      "type": "string",
+      "$comment": "CNV type (DEL or DUP)"
+    },
+    "size": {
+      "type": "number",
+      "$comment": "size of CNV in base pairs"
+    },
+    "overlap": {
+      "type": "string",
+      "$comment": "overlap between CNV calls (Illumina samples only; format is overlap of ERDS call with CNVnator call | overlap of CNVnator call with ERDS calls)"
+    },
+    "copy_number": {
+      "type": "string",
+      "$comment": "estimated copy number (for Illumina, the copy number reported by ERDS is given)"
+    },
+    "GC_content_percent": {
+      "type": "number",
+      "$comment": "% GC content"
+    },
+    "cytoband": {
+      "type": "string",
+      "$comment": "cytoband"
+    },
+    "gene_symbol": {
+      "type": "string",
+      "$comment": "official gene symbols with transcript overlap"
+    },
+    "gene_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with transcript overlap"
+    },
+    "exon_symbol": {
+      "type": "string",
+      "$comment": "official gene symbols with exon overlap"
+    },
+    "exon_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with exon overlap"
+    },
+    "CDS_symbol": {
+      "type": "string",
+      "$comment": "Official gene symbols with CDS overlap"
+    },
+    "CDS_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with CDS overlap"
+    },
+    "gnomAD_pLI": {
+      "type": "string",
+      "$comment": "gnomAD pLI value"
+    },
+    "gnomAD_oe_lof_upper": {
+      "type": "string",
+      "$comment": "upper bound of gnomAD observed/expected ratio for loss of function variants"
+    },
+    "RepeatMasker_percent_overlap": {
+      "type": "number",
+      "$comment": "% overlap with RepeatMasker repeats"
+    },
+    "unclean_genome_percent_overlap": {
+      "type": "number",
+      "$comment": "% overlap with segmental duplications, centromeres, and telomeres"
+    },
+    "MPO_nervous_system": {
+      "type": "string",
+      "$comment": "mouse phenotype ontology terms related to nervous system phenotypes"
+    },
+    "HPO_nervous_system": {
+      "type": "string",
+      "$comment": "human phenotype ontology terms related to nervous system phenotypes"
+    },
+    "CGD_disease_inheritance": {
+      "type": "string",
+      "$comment": "gene symbols with transcript overlap in the Clinical Genomic Database"
+    },
+    "OMIM_morbid_map": {
+      "type": "string",
+      "$comment": "OMIM Morbid Map"
+    },
+    "ISCA_region": {
+      "type": "string",
+      "$comment": "genomic disease region from the International Standards for Cytogenomic Arrays database"
+    },
+    "CNV_ISCA_percent_overlap": {
+      "type": "string",
+      "$comment": "% length of CNV overlapped by International Standards for Cytogenomic Arrays region"
+    },
+    "DECIPHER_region": {
+      "type": "string",
+      "$comment": "genomic disease region from the DECIPHER database"
+    },
+    "CNV_DECIPHER_percent_overlap": {
+      "type": "string",
+      "$comment": "% length of CNV overlapped by DECIPHER region"
+    },
+    "DGV_N_studies": {
+      "type": "number",
+      "$comment": "number of studies in which there is an overlapping CNV in the Database of Genomic Variants (DGV) (50% reciprocal overlap)"
+    },
+    "DGV_percent_freq_subjects_all_studies": {
+      "type": "number",
+      "$comment": "DGV frequency, any study (50% reciprocal overlap)"
+    },
+    "DGV_percent_freq_subjects_coverage_studies": {
+      "type": "number",
+      "$comment": "DGV frequency, only studies with coverage (50% reciprocal overlap)"
+    },
+    "DGV_percent_freq": {
+      "type": "number",
+      "$comment": "DGV frequency (50% reciprocal overlap)"
+    },
+    "CG_percent_freq_MSSNG_parents": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on the Complete Genomics platform in which the CNV is detected (50% reciprocal overlap)"
+    },
+    "CNVnator_percent_freq_MSSNG_parents_HiSeqX": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on Illumina HiSeq X in which the CNV is detected by CNVnator (50% reciprocal overlap)"
+    },
+    "CNVnator_percent_freq_MSSNG_parents_HiSeq2000": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on Illumina HiSeq 2000/2500 in which the CNV is detected by CNVnator (50% reciprocal overlap)"
+    },
+    "ERDS_percent_freq_MSSNG_parents_HiSeqX": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on Illumina HiSeq X in which the CNV is detected by ERDS (50% reciprocal overlap)"
+    },
+    "ERDS_percent_freq_MSSNG_parents_HiSeq2000": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on Illumina HiSeq 2000/2500 in which the CNV is detected by ERDS (50% reciprocal overlap)"
+    },
+    "ERDS_percent_freq_1000G": {
+      "type": "number",
+      "$comment": "percentage of 1000 Genomes Project samples in which the CNV is detected by ERDS"
+    },
+    "CNVnator_percent_freq_1000G": {
+      "type": "number",
+      "$comment": "percentage of 1000 Genomes Project samples in which the CNV is detected by CNVnator"
+    },
+    "putative_inheritance": {
+      "type": "string",
+      "$comment": "putative inheritance - possible values are “Maternal”, “Paternal”, “NA” (no parents available), “Inherited_Ambiguous” (both parents have the CNV), “One_parent_sequenced” (only one parent available), “Ambiguous” (inheritance is ambiguous), and “P_denovo” (putative de novo variant)"
+    },
+    "high_quality_rare": {
+      "type": "string",
+      "$comment": "“High quality rare” if the CNV meets the criteria for this, or “-” otherwise."
+    },
+    "sample_QC": {
+      "type": "string",
+      "$comment": "“ok”: sample passes all QC; “CNV_QC_FAIL”: sample failed CNV QC; “SNP_DN_QC_FAIL”: sample failed small-variant QC; “exclude”: miscellaneous problems with sample"
+    },
+    "FAMILYID": {
+      "type": "string",
+      "$comment": "family identifier"
+    },
+    "platform": {
+      "type": "string",
+      "$comment": "sequencing platform (Complete Genomics, Illumina HiSeq 2000, Illumina HiSeq 2500, or Illumina HiSeq X)"
+    }
+  }
+}
