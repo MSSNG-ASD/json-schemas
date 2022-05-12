@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://mssng-asd.github.io/json-schemas/SvSearch.json",
+  "type": "object",
+  "description": "Structural Variants Search",
+  "required": [
+    "sample"
+  ],
+  "properties": {
+    "sample": {
+      "type": "string",
+      "$comment": "sample identifier"
+    },
+    "reference_name": {
+      "type": "string"
+    },
+    "start": {
+      "type": "number"
+    },
+    "end": {
+      "type": "number"
+    },
+    "SV_type": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number",
+      "$comment": "size of SV in base pairs"
+    },
+    "EHdn_repeat_unit": {
+      "type": "string"
+    },
+    "EHdn_TR_size": {
+      "type": "number"
+    },
+    "EHdn_expansion": {
+      "type": "string"
+    },
+    "typeseq_priority": {
+      "type": "string"
+    },
+    "methods": {
+      "type": "string"
+    },
+    "overlap": {
+      "type": "string"
+    },
+    "GC_content_percent": {
+      "type": "number",
+      "$comment": "% GC content"
+    },
+    "cytoband": {
+      "type": "string",
+      "$comment": "cytoband"
+    },
+    "gene_symbol": {
+      "type": "string",
+      "$comment": "official gene symbols with transcript overlap"
+    },
+    "gene_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with transcript overlap"
+    },
+    "exon_symbol": {
+      "type": "string",
+      "$comment": "official gene symbols with exon overlap"
+    },
+    "exon_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with exon overlap"
+    },
+    "CDS_symbol": {
+      "type": "string",
+      "$comment": "Official gene symbols with CDS overlap"
+    },
+    "CDS_entrez_id": {
+      "type": "string",
+      "$comment": "Entrez gene IDs with CDS overlap"
+    },
+    "gnomAD_pLI": {
+      "type": "string",
+      "$comment": "gnomAD pLI value"
+    },
+    "gnomAD_oe_lof_upper": {
+      "type": "string",
+      "$comment": "upper bound of gnomAD observed/expected ratio for loss of function variants"
+    },
+    "RepeatMasker_percent_overlap": {
+      "type": "number",
+      "$comment": "% overlap with RepeatMasker repeats"
+    },
+    "unclean_genome_percent_overlap": {
+      "type": "number",
+      "$comment": "% overlap with segmental duplications, centromeres, and telomeres"
+    },
+    "MPO_nervous_system": {
+      "type": "string",
+      "$comment": "mouse phenotype ontology terms related to nervous system phenotypes"
+    },
+    "HPO_nervous_system": {
+      "type": "string",
+      "$comment": "human phenotype ontology terms related to nervous system phenotypes"
+    },
+    "CGD_disease_inheritance": {
+      "type": "string",
+      "$comment": "gene symbols with transcript overlap in the Clinical Genomic Database"
+    },
+    "OMIM_morbid_map": {
+      "type": "string",
+      "$comment": "OMIM Morbid Map"
+    },
+    "ISCA_region": {
+      "type": "string",
+      "$comment": "genomic disease region from the International Standards for Cytogenomic Arrays database"
+    },
+    "SV_ISCA_percent_overlap": {
+      "type": "number"
+    },
+    "DECIPHER_region": {
+      "type": "string",
+      "$comment": "genomic disease region from the DECIPHER database"
+    },
+    "SV_DECIPHER_percent_overlap": {
+      "type": "number",
+    },
+    "CG_percent_freq_MSSNG_parents": {
+      "type": "number",
+      "$comment": "percentage of MSSNG parents sequenced on the Complete Genomics platform in which the SV is detected (50% reciprocal overlap)"
+    },
+    "Manta_percent_freq_MSSNG_parents_HiSeqX": {
+      "type": "number"
+    },
+    "Manta_percent_freq_MSSNG_parents_HiSeq2000": {
+      "type": "number"
+    },
+    "DELLY_percent_freq_MSSNG_parents_HiSeqX": {
+      "type": "number"
+    },
+    "DELLY_percent_freq_MSSNG_parents_HiSeq2000": {
+      "type": "number"
+    },
+    "Manta_percent_freq_1000G": {
+      "type": "number"
+    },
+    "DELLY_percent_freq_1000G": {
+      "type": "number"
+    },
+    "putative_inheritance": {
+      "type": "string",
+      "$comment": "putative inheritance - possible values are “Maternal”, “Paternal”, “NA” (no parents available), “Inherited_Ambiguous” (both parents have the SV), “One_parent_sequenced” (only one parent available), “Ambiguous” (inheritance is ambiguous), and “P_denovo” (putative de novo variant)"
+    },
+    "high_quality_rare": {
+      "type": "string",
+      "$comment": "“High quality rare” if the SV meets the criteria for this, or “-” otherwise."
+    },
+    "sample_QC": {
+      "type": "string",
+      "$comment": "“ok”: sample passes all QC; “SV_QC_FAIL”: sample failed SV QC; “SNP_DN_QC_FAIL”: sample failed small-variant QC; “exclude”: miscellaneous problems with sample"
+    },
+    "FAMILYID": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    }
+  }
+}
